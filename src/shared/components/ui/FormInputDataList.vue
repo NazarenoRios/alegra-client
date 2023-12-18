@@ -1,5 +1,17 @@
-<script lang="ts" setup>
-import { ref, watch } from "vue";
+<template>
+  <div class="w-full">
+    <VueSelect
+      v-model="local"
+      :label="label"
+      :reduce="renderId"
+      @search="onSearch"
+      :options="options"
+    />
+  </div>
+</template>
+
+<script setup lang="ts">
+import { ref, watch, onMounted } from "vue";
 import "vue-select/dist/vue-select.css";
 //@ts-ignore
 import VueSelect from "vue-select";
@@ -36,15 +48,11 @@ const onSearch = (value: string) => {
 watch(local, (value) => {
   emit("update:modelValue", value);
 });
+
+onMounted(() => {
+  // Your onMounted logic here
+  console.log("Component is mounted");
+  onSearch("a");
+  // You can perform additional setup or actions when the component is mounted
+});
 </script>
-<template>
-  <div class="w-full">
-    <VueSelect
-      v-model="local"
-      :label="label"
-      :reduce="renderId"
-      @search="onSearch"
-      :options="options"
-    />
-  </div>
-</template>
