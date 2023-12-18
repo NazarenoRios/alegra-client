@@ -1,0 +1,35 @@
+body {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  @apply bg-gray-100;
+}
+
+input {
+  background: transparent;
+  outline: none;
+  border: none;
+}
+
+button {
+  outline: none;
+  border: none;
+}
+
+.table-flat {
+  @apply text-xs w-full;
+  th {
+    @apply text-left;
+  }
+  td {
+    @apply border-b py-3;
+  }
+}
+
+.fade-up {
+  animation: 0.5s fade-up 1;
+  @keyframes fade-up {
+    from {
+      transform: translateY(50%);
+      opacity: 0;
+    }
+  }
+}
