@@ -28,6 +28,6 @@ yarn dev
 
 ### Utils
 
-[Repositorio Github](https://github.com/NazarenoRios/bonum-client)
+[Repositorio Github](https://github.com/NazarenoRios/alegra-client)
 
-[Pagina Deployada](https://bonum-movies.vercel.app/)
+[Pagina Deployada](https://alegra-worldimages.vercel.app/)
